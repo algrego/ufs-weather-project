@@ -1,0 +1,24 @@
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# GRIB2 and large data files (keep outputs out of git)
+*.grb2
+*.grib2
+*.nc
+*.idx
+
+# OS files
+.DS_Store
+Thumbs.db
