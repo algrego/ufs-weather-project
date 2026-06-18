@@ -1,13 +1,13 @@
-## Overview
+##Overview
 
 Copyright (c) 2026 Alison Gregory, University Corporation for Atmospheric Research (UCAR), Cooperative Programs for the Advancement of Earth System Sciences (CPAESS) and NOAA Weather Program Office (WPO)
 
-# UFS SRW App
+#UFS SRW App
 This project includes a mix of the following:
 - Open source works that are not in the public domain
 - Open source works by the U.S. Government that is in the public domain
 
-## Parts of this project that are not in the public domain
+##Parts of this project that are not in the public domain
 This project utilizes the following unmodified works under various licenses, as shown below.
 
 - Atmos cube sphere dycore: [GNU Lesser General Public License 3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html) (LGPL)
@@ -20,7 +20,7 @@ This project utilizes the following unmodified works under various licenses, as 
 - UPP: [GNU Lesser General Public License 3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html) (LGPL) 
 - UFS Utils: [GNU Lesser General Public License 3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html) (LGPL)
 
-## The rest of this project is in the worldwide public domain
+##The rest of this project is in the worldwide public domain
 
 As a work of the United States Government, this project is in the public domain within the United States. Additionally, NOAA, CIRA, CIRES, and UCAR waive copyright and related rights in the work worldwide through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
 
