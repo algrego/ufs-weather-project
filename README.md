@@ -1,5 +1,4 @@
-# Understanding Our Nation's Forecast System: 
-# A Storm in Cedar Rapids, Iowa
+# Understanding Our Nation's Forecast System:                 A Storm in Cedar Rapids, Iowa
 
 
 ## The Unified Forecast System (UFS) is a community-based, coupled, comprehensive Earth modeling system. The [Short Range Weather Application](https://github.com/ufs-community/ufs-srweather-app/) (SRW-APP) is a development branch that targets predictions of atmospheric behavior on a limited spatial domain and on time scales from minutes to several days.
