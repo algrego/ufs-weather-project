@@ -1,4 +1,4 @@
-name: earth-analytics-python
+name: srw-analysis
 channels:
   - conda-forge
   - defaults
@@ -12,6 +12,7 @@ dependencies:
   - pandas
   - scipy
   - dask
+  - cfgrib>=0.9.15.1
 
   # Geospatial libraries
   # Coordinates and CRSs
@@ -58,6 +59,7 @@ dependencies:
   - descartes
   - contextily
   - seaborn
+  
   # Holoviews
   # --- Avoid compatibility issues with bokeh and new holoviews
   - holoviews<=1.19
