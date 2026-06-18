@@ -18,7 +18,7 @@ This project will utilize the [Short Range Weather App Tutorial: Sumulating the 
 # Citations and Acknowledgements
 - **NOAA EPIC** for the SRW tutorial, pre-staged data, and HPC allocation on Hercules/Orion
 - **Dr. Lilly Jones**, GEOG 5663 Capstone Instructor
-- Tutorial: **Rowin Smith**, [Short Range Weather App Tutorial: Simulating the August 10 2020 Derecho](https://www.ufs.epic.noaa.gov/srw-tutorial-august102020-derecho/)
+- **Rowin Smith**, UFS Student Ambassador, [Short Range Weather App Tutorial: Simulating the August 10 2020 Derecho](https://www.ufs.epic.noaa.gov/srw-tutorial-august102020-derecho/)
 
 # Background on the UFS Short-Range Weather Application
 The Unified Forecast System (UFS) is a community-based, coupled, comprehensive Earth modeling system. NOAA's operational model suite for numerical weather prediction (NWP) is quickly transitioning to the UFS from a number of legacy modeling systems. The UFS enables research, development, and contribution opportunities within the broader Weather Enterprise (including government, industry, and academia). For more information about the UFS, visit the UFS Portal at https://ufs.epic.noaa.gov/.
