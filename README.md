@@ -6,14 +6,21 @@ Our nation relies on earth system models that are computationally massive, solvi
 
 This project will utilize the [Short Range Weather App Tutorial: Sumulating the August 10 2020 Derecho](https://ufs.epic.noaa.gov/srw-tutorial-august102020-derecho/) to create a clean and runnable workflow for understanding and visualizing this modeling platform and related output. Ideally, this framework could be utilized to represent any Application being run by the UFS and can be updated in the future to apply to other relevant numerical weather prediction processes.  
 
-# What data does it use, and where does the data come from?
+# Datasets
+While this project will utilize UFS SRW App source code from the UFS community Github Repository, the notebook and associated workflow can be run without access to HPC resources or NOAA credentials. 
 
-# How do I set up the environment to run the code?
+Input/output data will be GRIB2 files that can use in notebook tools to plot the data. 
 
+The filename format for naming HRRR GRIB2 data is {yy}{jjj}{hh}00{fcst_hr:02d}00. The forecast input data is for August 10, 2023, and there will be 5 input files: (1) 2022300000000 (initial conditions (forecast hour 00)), (2)2022300000600 (boundary conditions at +6 hrs), (3) 2022300001200 (boundary conditions at +12 hrs), (4) 2022300001800 (boundary conditions at +18 hrs), (5) 2022300002400 (boundary conditions at +24 hrs).
 
-# How is the repo organized?
+The total output code to download 
 
-## Environments
+*NOTE* If this data is inaccessible via a jupyter notebook, alternative representative datasets will be used or CSV/visual representations of this data will be used.
+
+# Running this code
+Install the associated environment.yml file of the srw-analysis kernel. This includes not only packages to visualize and manipulate data but also packages relevant to the UFS SRW.
+
+It is also recommended to review the associated tutorial in full to get an understanding of how model data was collected behind the NOAA access wall. 
 
 # Citations and Acknowledgements
 - **NOAA EPIC** for the SRW tutorial, pre-staged data, and HPC allocation on Hercules/Orion
