@@ -1,5 +1,4 @@
-# Understanding Our Nation's Forecast System:                 A Storm in Cedar Rapids, Iowa
-
+# Understanding Our Nation's Forecast System: A Storm in Cedar Rapids, Iowa
 
 ## The Unified Forecast System (UFS) is a community-based, coupled, comprehensive Earth modeling system. The [Short Range Weather Application](https://github.com/ufs-community/ufs-srweather-app/) (SRW-APP) is a development branch that targets predictions of atmospheric behavior on a limited spatial domain and on time scales from minutes to several days.
 
@@ -7,21 +6,19 @@ Our nation relies on earth system models that are computationally massive, solvi
 
 This project will utilize the [Short Range Weather App Tutorial: Sumulating the August 10 2020 Derecho](https://ufs.epic.noaa.gov/srw-tutorial-august102020-derecho/) to create a clean and runnable workflow for understanding and visualizing this modeling platform and related output. Ideally, this framework could be utilized to represent any Application being run by the UFS and can be updated in the future to apply to other relevant numerical weather prediction processes.  
 
-
-
 # What data does it use, and where does the data come from?
 
 # How do I set up the environment to run the code?
+
 
 # How is the repo organized?
 
 ## Environments
 
 # Citations and Acknowledgements
-- **NOAA EPIC** for the SRW tutorial, pre-staged data, and HPC allocation on Hercules
+- **NOAA EPIC** for the SRW tutorial, pre-staged data, and HPC allocation on Hercules/Orion
 - **Dr. Lilly Jones**, GEOG 5663 Capstone Instructor
-- Tutorial: [UFS SRW App — August 10, 2020 Derecho](https://www.ufs.epic.noaa.gov/srw-tutorial-august102020-derecho/)
-- Reference: Gallus Jr. and Harrold (2023), *Weather and Forecasting*
+- Tutorial: **Rowin Smith** [UFS SRW App — August 10, 2020 Derecho](https://www.ufs.epic.noaa.gov/srw-tutorial-august102020-derecho/)
 
 # Background on the UFS Short-Range Weather Application
 The Unified Forecast System (UFS) is a community-based, coupled, comprehensive Earth modeling system. NOAA's operational model suite for numerical weather prediction (NWP) is quickly transitioning to the UFS from a number of legacy modeling systems. The UFS enables research, development, and contribution opportunities within the broader Weather Enterprise (including government, industry, and academia). For more information about the UFS, visit the UFS Portal at https://ufs.epic.noaa.gov/.
