@@ -6,6 +6,8 @@ Our nation relies on earth system models that are computationally massive, solvi
 
 This project will utilize the [Short Range Weather App Tutorial: Sumulating the August 10 2020 Derecho](https://ufs.epic.noaa.gov/srw-tutorial-august102020-derecho/) to create a clean and runnable workflow for understanding and visualizing this modeling platform and related output. Ideally, this framework could be utilized to represent any Application being run by the UFS and can be updated in the future to apply to other relevant numerical weather prediction processes.  
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20752421.svg)](https://doi.org/10.5281/zenodo.20752421)
+
 # Datasets
 While this project will utilize UFS SRW App source code from the UFS community Github Repository, the notebook and associated workflow can be run without access to HPC resources or NOAA credentials. 
 
