@@ -9,18 +9,15 @@ This project will utilize the [Short Range Weather App Tutorial: Sumulating the 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20752421.svg)](https://doi.org/10.5281/zenodo.20752421)
 
 # Datasets
-While this project will utilize UFS SRW App source code from the UFS community Github Repository, the notebook and associated workflow can be run without access to HPC resources or NOAA credentials. 
+This notebook pulls **archived HRRR (High-Resolution Rapid Refresh) model data** directly from NOAA's public AWS bucket using the [Herbie](https://herbie.readthedocs.io/) Python package — no HPC account or manual downloads. Anyone can run this notebook top to bottom with just a Python environment and an internet connection.
 
 Input/output data will be GRIB2 files that can use in notebook tools to plot the data. 
 
-The filename format for naming HRRR GRIB2 data is {yy}{jjj}{hh}00{fcst_hr:02d}00. The forecast input data is for August 10, 2023, and there will be 5 input files: (1) 2022300000000 (initial conditions (forecast hour 00)), (2)2022300000600 (boundary conditions at +6 hrs), (3) 2022300001200 (boundary conditions at +12 hrs), (4) 2022300001800 (boundary conditions at +18 hrs), (5) 2022300002400 (boundary conditions at +24 hrs).
-
-The total output code to download 
-
-*NOTE* If this data is inaccessible via a jupyter notebook, alternative representative datasets will be used or CSV/visual representations of this data will be used.
+### About the HRRR:
+It is important to note that the HRRR runs on WRF-ARW, which is a single-core model, using the ARW dynamical core. Not only does the HRRR model use different dynamical cores but it also uses different resolutions and physics.  
 
 # Running this code
-Install the associated environment.yml file of the srw-analysis kernel. This includes not only packages to visualize and manipulate data but also packages relevant to the UFS SRW.
+Install the associated environment.yml file of the srw-analysis kernel. This includes not only packages to visualize and manipulate data but also packages relevant to the UFS SRW (to utilize UFS SRW data downloads in future iterations).
 
 It is also recommended to review the associated tutorial in full to get an understanding of how model data was collected behind the NOAA access wall. 
 
@@ -28,6 +25,8 @@ It is also recommended to review the associated tutorial in full to get an under
 - **NOAA EPIC** for the SRW tutorial, pre-staged data, and HPC allocation on Hercules/Orion
 - **Dr. Lilly Jones**, GEOG 5663 Capstone Instructor
 - **Rowin Smith**, UFS Student Ambassador, [Short Range Weather App Tutorial: Simulating the August 10 2020 Derecho](https://www.ufs.epic.noaa.gov/srw-tutorial-august102020-derecho/)
+- ** Brian Baylock**, NOAA 
+NOAA High-Resolution Rapid Refresh (HRRR) Model was accessed on 07/16/2026 from https://registry.opendata.aws/noaa-hrrr-pds
 
 # Background on the UFS Short-Range Weather Application
 The Unified Forecast System (UFS) is a community-based, coupled, comprehensive Earth modeling system. NOAA's operational model suite for numerical weather prediction (NWP) is quickly transitioning to the UFS from a number of legacy modeling systems. The UFS enables research, development, and contribution opportunities within the broader Weather Enterprise (including government, industry, and academia). For more information about the UFS, visit the UFS Portal at https://ufs.epic.noaa.gov/.
