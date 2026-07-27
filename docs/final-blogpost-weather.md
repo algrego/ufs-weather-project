@@ -22,7 +22,7 @@ Our nation has so much weather data available, right under our noses! We just ha
 
 This is important because the data used for our nation's forecasts is constantly being improved, and it's publicly available -- so you can improve how these models run too! This is also significant for raising awareness about available open-source coding. Students interested in learning more about all of the NOAA weather models that are available can use this notebook as a jumping off point. Students will be able to learn better when they can connect hands on experience with coding to a real lived weather experience.
 
-  ![Derecho wind field](../outputs/derecho_wind_animation.gif)
+  ![Derecho wind field](https://github.com/algrego/ufs-weather-project/blob/main/outputs/derecho_wind_animation.gif)
 
 The plot above shows a visualization of an analysis run of the HRRR. This is the kind of output students could create on their own. Of any storm in the US that they find to be interesting.
 
