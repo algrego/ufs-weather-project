@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>A Storm&apos;s Appoaching&colon; Creating your own Weather Forecast</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="a-storms-appoaching-creating-your-own-weather-forecast">A Storm's Appoaching: Creating your own Weather Forecast</h1>
+<p>A lot of people use our nation's operational weather forecasts every day, but few know how it actually works. This research shows that the complex processes inherent in understanding the weather don't need to be scary or inaccessible! With just a computer, a simple understanding of Python coding, and access to Github -- you too can be well on your way to understanding one of our nation's most important public services!</p>
+<p><img src="file:////Users/agregory/Earth Data Analytics/Spring 26/Mtn-Heat-Waves/ufs-weather-project/docs/Photos-for-Blog/weatherbrief.png" alt="Weather Briefing">
+<em>Weather briefing in 1965 (DI02082). (1965). In NCAR/UCAR Image and Multimedia Gallery. University Corporation for Atmospheric Research (UCAR). <a href="https://n2t.org/ark:/85065/d73t9fc2">https://n2t.org/ark:/85065/d73t9fc2</a> (Original work published 1965)</em></p>
+<h2 id="introduction">Introduction</h2>
+<p>The National Oceanic and Atmospheric Administration (NOAA) and the National Weather Service (NWS) use complex numerical models to predict the weather. This work requires access to high-performance computers (HPCs), a strong understanding of Fortran, Python, Linux, Terminal/Shell scripting, and more! Also, to fully understand how the weather models operate, scientists need a meteorlogical background to know the complex atmospheric physics equations behind the model and how to read the forecast data that is output. This makes understanding our nation's weather forecasts out of reach for most people.</p>
+<p>But did you know the code used to create our nation's weather forecasts is publicly available? One just needs to know how to access it!</p>
+<p>This small notebook will demonstrate how easy it is to access forecast data and get interesting visuals and data sets to look at.</p>
+<h2 id="area-of-focus">Area of Focus</h2>
+<p>This notebook focuses on the wind from a storm that occurred on August 10th, 2020 near Cedar Rapids, Iowa. However, it is important to note that once this data is downloaded, you could look at any location in the U.S. at any time period. There are also other data that could be analyzed such as temperature, dewpoint, accumulated precipitation, snow cover, and more!</p>
+<h2 id="research-findings">Research Findings</h2>
+<p>Our nation has so much weather data available, right under our noses! We just have to know how to access it. This notebook shows you that you can access high quality weather data without using an expensive computer or spending hours coding in a language you don't understand. Below is an example of data that can be accessed without a supercomputer. This notebook was able to run the forecast and analysis of the wind speeds that occurred during the peak time of this storm.</p>
+<p><img src="file:////Users/agregory/Earth Data Analytics/Spring 26/Mtn-Heat-Waves/ufs-weather-project/outputs/cedar_rapids_wind_timeseries.png" alt="Derecho plotted data"></p>
+<p>This is important because the data used for our nation's forecasts is constantly being improved, and it's publicly available -- so you can improve how these models run too! This is also significant for raising awareness about available open-source coding. Students interested in learning more about all of the NOAA weather models that are available can use this notebook as a jumping off point. Students will be able to learn better when they can connect hands on experience with coding to a real lived weather experience.</p>
+<p><img src="file:////Users/agregory/Earth Data Analytics/Spring 26/Mtn-Heat-Waves/ufs-weather-project/outputs/derecho_wind_animation.gif" alt="Derecho wind field"></p>
+<p>The plot above shows a visualization of an analysis run of the HRRR. This is the kind of output students could create on their own. Of any storm in the US that they find to be interesting.</p>
+<p>All of the material related to this project can be found at <em><a href="https://github.com/algrego/ufs-weather-project/">https://github.com/algrego/ufs-weather-project/</a></em></p>
+<h2 id="implications-and-future-work">Implications and Future Work</h2>
+<p>This project currently pulls from archived weather forecast models. This is great for students to understand how the forecast models work and how our weather is predicted. It is not as useful if students want to actually make changes and improvements to a national model. Ideally, in the future users would be able to run their own model and modify it directly in their python notebook. Notebooks like this should be created and shared more widely across myriad ages of students to improve awareness about our nation's weather forecast capabilities and advancing weather technologies.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Data collected <a href="https://registry.opendata.aws/noaa-hrrr-pds/">https://registry.opendata.aws/noaa-hrrr-pds/</a> with special help from <a href="https://herbie.readthedocs.io/en/stable/index.html#herbie-download-weather-forecast-model-data-in-python">Herbie: Download Weather Forecast Model Data in Python</a></p>
+<ul>
+<li>NOAA EPIC, for the SRW tutorial, pre-staged sdata, and HPC allocation on Hercules/Orion</li>
+<li>Dr. Lily Jones, GEOG 5663 CApstone Instructor</li>
+<li><a href="https://www.ufs.epic.noaa.gov/srw-tutorial-august102020-derecho/">Tutorial</a> Rowin Smith, UFS SRW - August 10, 2020 Derecho</li>
+<li>Gallus, W. A., and M. A. Harrold, 2023: Challenges in Numerical Weather Prediction of the 10 August 2020 Midwestern Derecho: Examples from the FV3-LAM</li>
+</ul>
+
+            
+            
+        </body>
+        </html>
