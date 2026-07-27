@@ -16,13 +16,17 @@ This small notebook will demonstrate how easy it is to access forecast data and 
 This notebook focuses on the wind from a storm that occurred on August 10th, 2020 near Cedar Rapids, Iowa. However, it is important to note that once this data is downloaded, you could look at any location in the U.S. at any time period. There are also other data that could be analyzed such as temperature, dewpoint, accumulated precipitation, snow cover, and more!
 
 ## Research Findings
-Our nation has so much weather data available, right under our noses! We just have to know how to access it. This notebook shows you that you can access high quality weather data without using an expensive computer or spending hours coding in a language you don't understand. 
+Our nation has so much weather data available, right under our noses! We just have to know how to access it. This notebook shows you that you can access high quality weather data without using an expensive computer or spending hours coding in a language you don't understand. Below is an example of data that can be accessed without a supercomputer. This notebook was able to run the forecast and analysis of the wind speeds that occurred during the peak time of this storm.
+
+  ![Derecho plotted data](../outputs/cedar_rapids_wind_timeseries.png)
+
+This is important because the data used for our nation's forecasts is constantly being improved, and it's publicly available -- so you can improve how these models run too! This is also significant for raising awareness about available open-source coding. Students interested in learning more about all of the NOAA weather models that are available can use this notebook as a jumping off point. Students will be able to learn better when they can connect hands on experience with coding to a real lived weather experience.
 
   ![Derecho wind field](../outputs/derecho_wind_animation.gif)
 
 The plot above shows a visualization of an analysis run of the HRRR. This is the kind of output students could create on their own. Of any storm in the US that they find to be interesting.
 
-This is important because the data used for our nation's forecasts is constantly being improved, and it's publicly available -- so you can improve how these models run too! This is also significant for raising awareness about available open-source coding. Students interested in learning more about all of the NOAA weather models that are available can use this notebook as a jumping off point. Students will be able to learn better when they can connect hands on experience with coding to a real lived weather experience. 
+ 
 
 All of the material related to this project can be found at *[https://github.com/algrego/ufs-weather-project/](https://github.com/algrego/ufs-weather-project/)*
 
