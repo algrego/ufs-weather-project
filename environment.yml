@@ -2,8 +2,7 @@ name: srw-analysis
 channels:
   - conda-forge
   - defaults
-  - ufs-community
-
+  
 dependencies:
   - python=3.11
   - pip
